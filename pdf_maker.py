@@ -5,7 +5,7 @@ import pandas as pd
 pdf = FPDF(orientation="P", unit="mm", format="A4")
 pdf.set_auto_page_break(auto=False, margin=0)
 
-df = pd.read_csv("./app3/topics.csv")
+df = pd.read_csv("./topics.csv")
 
 for index, row in df.iterrows():
     # Sets up header
@@ -41,4 +41,4 @@ for index, row in df.iterrows():
         pdf.set_text_color(255,0,0)
         pdf.cell(w=0, h=10, txt=row["Topic"], align="R")
 
-pdf.output("./app3/output.pdf")
+pdf.output("./output.pdf")
